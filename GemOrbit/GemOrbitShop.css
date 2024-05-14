@@ -1,0 +1,799 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700;%20800;9008%20display-swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #070707;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #a8a9ad;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: url('gemstone/black.PNG');
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9 2 rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: url('gemstone/black.PNG');
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.navbar {
+    border-bottom: .1remm solid rgba(0, 0, 0, .2);
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+.logo:hover {
+    color: var(--main-color);
+    text-shadow: 0 0 25px var(--main-color),
+        0 0 50px var(--main-color);
+    transform: scale(1.1);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color)
+}
+
+.navbar .btn[href="#logout"] {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--text-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--text-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.navbar .btn[href="#logout"]:hover {
+    box-shadow: none;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.bx-cart {
+    font-size: 30px;
+    vertical-align: middle;
+}
+
+/* CSS for showing/hiding the cart */
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    max-height: 100vh;
+    /* Set maximum height */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    padding: 20px;
+    background: var(--bg-color);
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: .5s ease;
+}
+
+.cart.active {
+    right: 0;
+}
+
+
+.cart-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cart-box {
+    display: flex;
+    align-items: center;
+    /* Align items vertically in the center */
+}
+
+.cart-img {
+    width: 100px;
+    /* Adjust the width as needed */
+    margin-right: 20px;
+    /* Add some space between the image and the text */
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+    flex: 1;
+    /* Take remaining space */
+}
+
+.cart-product-title {
+    font-size: 2.2rem;
+}
+
+.cart-price {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.cart-product-title,
+.cart-price,
+.cart-quantity {
+    margin-left: 5px;
+}
+
+.cart-quantity {
+    width: 3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10%;
+}
+
+.cart-remove {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+}
+
+.total-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.total-price {
+    margin-left: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.btn-buy {
+    display: flex;
+    padding: 1rem 2.8rem;
+    background: var(--text-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--text-color);
+    font-size: 1.5rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    margin: 1.5rem auto 0 auto;
+    transition: .5s ease;
+}
+
+.btn-buy:hover {
+    box-shadow: none;
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 3rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.home {
+    width: 100%;
+    min-height: 100 vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+
+.home-img img {
+    margin-top: 20px;
+    width: 35vw;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--text-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--text-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.works-box {
+    width: 200px;
+    /* Set your desired width */
+    height: 600px;
+    /* Set your desired height */
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the total width */
+}
+
+.works {
+    margin-bottom: 10%;
+}
+
+.works h2 {
+    margin-top: 20px;
+    margin-bottom: 2rem;
+}
+
+.works p {
+    font-size: 1px;
+}
+
+.works-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.works-container .works-box {
+    flex: 1 1 30rem;
+    max-width: 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    margin: 0 2rem 2rem;
+    transition: .5s ease;
+}
+
+.works-container .works-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
+}
+
+.works-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.works-box h2 {
+    font-size: 2.6rem;
+}
+
+.works-box h3 {
+    font-size: 1.5rem;
+}
+
+.works-box h3 {
+    position: absolute; /* Positions the h3 relative to the works-box */
+    bottom: 8rem; /* Aligns the h3 to the bottom of the works-box */
+    left: 50%; /* Moves the h3 to the horizontal center */
+    transform: translateX(-50%); /* Adjusts position to center horizontally */
+    text-align: center; /* Centers the text horizontally */
+    margin: 0; /* Removes any default margin */
+    width: 100%; /* Makes the h3 take the full width of the container */
+}
+
+.works-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0
+}
+
+.works-box {
+    position: relative;
+    /* Add any other styling you need */
+}
+
+.works-box .bx.bx-cart {
+    position: absolute;
+    bottom: 10px;
+    /* Adjust as needed */
+    right: 10px;
+    /* Adjust as needed */
+    color: var(--text-color);
+    /* Change to your desired initial color */
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    /* Add transition for color change */
+}
+
+.works-box .bx.bx-cart:hover {
+    color: var(--main-color);
+    /* Change to your desired hover color */
+}
+
+.works-box .food-price {
+    position: absolute;
+    bottom: 10px;
+    /* Adjust as needed */
+    left: 10px;
+    /* Adjust as needed */
+    color: var(--text-color);
+    /* Change to your desired initial color */
+    font-size: 20px;
+    /* Adjust as needed */
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: var(--second-bg-color);
+}
+
+.about-img img {
+    margin-top: 80px;
+    width: 35vw;
+    border-radius: 10%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    background: url(gemstone/black.PNG);
+}
+
+.about-img img {
+    margin-top: 10px;
+    margin-left: 100px;
+    /* Adding margin on the left */
+    width: 35vw;
+    border-radius: 20px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h1 {
+    text-align: left;
+    line-height: 2;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    margin: 2rem 10rem 3rem 0;
+    /* top right bottom left */
+}
+
+.album {
+    background: var(--second-bg-color)
+}
+
+.pic img {
+    margin-top: 20px;
+    width: 200px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+    margin-right: 1rem;
+}
+
+.contact form .input-box input:last-child {
+    margin-right: 0;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* Default styles */
+.footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: auto;
+    padding: 20px;
+    background-color: var(--second-bg-color);
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 20%;
+    margin-right: auto;
+    max-width: 80%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.first-logo,
+.support-info,
+.company-info {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-info .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company-info {
+    margin-left: -50px;
+}
+
+.row h4 {
+    font-size: 18px;
+}
+
+.row p {
+    font-size: 12px;
+}
+
+.footer-info-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer-text {
+    margin: 0 5px;
+}
+
+.footer-text p {
+    font-size: 12px;
+}
+
+.support-info p {
+    transition: .5s ease;
+}
+
+.support-info p:hover {
+    text-shadow: 0 0 5px var(--text-color); /* Change this to the desired color */
+}
+
+.company-info p {
+    transition: .5s ease;
+}
+
+.company-info p:hover {
+    text-shadow: 0 0 5px var(--text-color); /* Change this to the desired color */
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    margin-top: 5px;
+    transition: .5s ease;
+}
+
+.social-media a:hover,
+.social-media a:active {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .footer-info {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-logo,
+    .support-info,
+    .company-info {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .row h4 {
+        font-size: 16px;
+    }
+
+    .row p {
+        font-size: 10px;
+    }
+}
+
+/* breakpoints */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        font-size: 3.6rem;
+        color: var(--text-color);
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    /* Ensure the section uses Flexbox */
+    .home {
+        display: flex;
+        flex-direction: column;
+        /* Stack children vertically */
+        height: 100vh;
+        /* Full viewport height */
+    }
+
+    /* Style the content div */
+    .home.home-content {
+        flex-grow: 1;
+        /* Allow it to take up remaining space */
+    }
+
+    .home-img {
+        text-align: center; /* Aligns the image horizontally */
+    }
+    
+    .home-img img {
+        display: block; /* Ensures the image behaves as a block element */
+        margin: 0 auto; /* Centers the image horizontally */
+        width: 80%; /* Adjust the width as needed */
+    }
+
+    .about-content {
+        margin-bottom: 100%;
+    }
+
+    .about-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .about-content h1 {
+        font-size: 5rem;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        /* Stack children vertically */
+        height: 100vh;
+        /* Full viewport height */
+        margin-top: 80%;
+    }
+
+    /* Style the content div */
+    .about.about-content {
+        flex-grow: 1; /* Allow it to take up remaining space */
+    }
+    
+    .about-content {
+        margin-left: 30px; /* Adjust margin as needed */
+        margin-right: 30px; /* Adjust margin as needed */
+    }
+
+    .about-img {
+        text-align: center; /* Aligns the image horizontally */
+    }
+    
+    .about-img img {
+        display: block; /* Ensures the image behaves as a block element */
+        margin: 0 auto; /* Centers the image horizontally */
+        width: 80%; /* Adjust the width as needed */
+        margin-top: 50%;
+    }
+    
+    .contact form .input-box input {
+        width: 100%;
+
+    }
+}

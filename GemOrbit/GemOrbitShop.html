@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GembOrbit</title>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="GemOrbitShop.css">
+</head>
+
+<body>
+    <!-- header design -->
+    <header class="header">
+        <a href="#" class="logo"><span>Gem</span>Orbit</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#works">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#shop"><i class='bx bx-cart' id="cart-icon"></i></a>
+            <!-- cart -->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!-- content -->
+                <div class="cart-content">
+                    <div class="cart-box">
+                    </div>
+                </div>
+                <!-- total -->
+                <div class="total">
+                    <div class="total-title">Total </div>
+                    <div class="total-price">₱0.00</div>
+                </div>
+                <!-- buy button -->
+                <button type="button" class="btn-buy">Buy Now</button>
+                <!-- cart close -->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+            <a href="#logout" id="logoutBtn" class="btn">Logout</a>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text-content">
+                <h3>Welcome to</h3>
+                <h1><span>Gem</span>Orbit</h1>
+                <p>Where every stone tells a story! Step into a world of dazzling hues and timeless elegance.
+                    Whether you're seeking a vibrant centerpiece or a subtle accent, our collection awaits to captivate
+                    your senses. Feel free to explore our treasure trove of gemstones, each carefully selected to
+                    inspire
+                    and enchant. Let us accompany you on a journey of beauty and wonder.</p>
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="gemstone/stones-cut-diamonds-wallpaper-preview.jpg" alt="Gemstone">
+        </div>
+    </section>
+
+    <!-- works section design -->
+    <section class="works" id="works">
+        <br><br><br><br><br><br><br>
+        <h2 class="heading">Collect Your <span>Gemstones</span> Now!</h2>
+        <br><br>
+        <div class="works-container">
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/1.png" alt="Diamond"></div>
+                <h2 class="food-title">Diamond</h2>
+                <p class="description">A crystalline form of carbon known for its exceptional hardness and brilliance,
+                    often used in jewelry.</p> <br>
+                    <h3>Shape: Round <br>
+                        Carat: 12 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/2.png" alt="Ruby"></div>
+                <h2 class="food-title">Ruby</h2>
+                <p class="description">A red gemstone variety of the mineral corundum, symbolizing passion and vitality.
+                </p><br>
+                <h3>Shape: Round <br>
+                    Carat: 12 </h3>
+                <span class="food-price"> ₱ 288,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/3.png" alt="Sapphire"></div>
+                <h2 class="food-title">Sapphire</h2>
+                <p class="description">A gemstone variety of corundum available in various colors, most commonly blue,
+                    symbolizing wisdom and royalty.</p><br>
+                    <h3>Shape: Round <br>
+                        Carat: 12 </h3>
+                <span class="food-price">₱ 432,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/4.png" alt="Emerald"></div>
+                <h2 class="food-title">Emerald</h2>
+                <p class="description">A green gemstone of the beryl mineral family, prized for its rich color and
+                    rarity, symbolizing growth and rebirth.</p>
+                <span class="food-price">₱ 720,000.00</span><br>
+                <h3>Shape: Radiant <br>
+                    Carat: 18 </h3>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/5.png" alt="Amethyst"></div>
+                <h2 class="food-title">Amethyst</h2>
+                <p class="description">A purple variety of quartz, valued for its deep color and often associated with
+                    spirituality and calmness.</p><br>
+                    <h3>Shape: Cushion <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/6.png" alt="Aquamarine"></div>
+                <h2 class="food-title">Aquamarine</h2>
+                <p class="description">A blue to green-blue variety of the mineral beryl, evoking the colors of the sea,
+                    symbolizing tranquility and clarity.</p><br>
+                    <h3>Shape: Asscher <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/7.png" alt="Topaz"></div>
+                <h2 class="food-title">Topaz</h2>
+                <p class="description">A gemstone available in various colors, but commonly yellow to brown, known for
+                    its brilliance and durability.</p><br>
+                    <h3>Shape: Oval <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/8.png" alt="Garnet"></div>
+                <h2 class="food-title">Garnet</h2>
+                <p class="description">A group of silicate minerals available in a range of colors, often red,
+                    symbolizing love and passion.</p><br>
+                    <h3>Shape: Uncut <br>
+                        Carat: 12 </h3>
+                <span class="food-price">₱ 144,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/9.png" alt="Opal"></div>
+                <h2 class="food-title">Opal</h2>
+                <p class="description">A gemstone known for its iridescent play-of-color, formed from silica and water,
+                    symbolizing inspiration and creativity.</p><br>
+                    <h3>Shape: Oval <br>
+                        Carat: 15 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/10.png" alt="Pearl"></div>
+                <h2 class="food-title">Pearl</h2>
+                <p class="description">A lustrous gemstone produced within the soft tissue of a living mollusk,
+                    symbolizing purity and innocence.</p><br>
+                    <h3>Shape: Round <br>
+                        Size: 9.5 milimeters </h3>
+                <span class="food-price">₱ 600,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/11.png" alt="Turquoise"></div>
+                <h2 class="food-title">Turquoise</h2>
+                <p class="description">A blue to green mineral prized for its unique color, often used in jewelry and
+                    art, symbolizing protection and strength.</p><br>
+                    <h3>Shape: Unshape <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/12.png" alt="Peridot"></div>
+                <h2 class="food-title">Peridot</h2>
+                <p class="description">A bright green gemstone variety of the mineral olivine, associated with light and
+                    positive energy.</p><br>
+                    <h3>Shape: Oval <br>
+                        Carat: 15 </h3>
+                <span class="food-price">₱ 72,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/13.png" alt="Citrine"></div>
+                <h2 class="food-title">Citrine</h2>
+                <p class="description">A yellow to orange variety of quartz, known for its warm tones and vibrant
+                    energy.</p><br>
+                    <h3>Shape: Oval <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 144,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/14.png" alt="Tanzanite"></div>
+                <h2 class="food-title">Tanzanite</h2>
+                <p class="description">A blue to violet gemstone variety of the mineral zoisite, found only in Tanzania,
+                    symbolizing transformation and spiritual growth.</p><br>
+                    <h3>Shape: Round <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 144,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/15.png" alt="Tourmaline"></div>
+                <h2 class="food-title">Tourmaline</h2>
+                <p class="description">A group of minerals available in a variety of colors, known for their vibrant
+                    hues and electric properties.</p><br>
+                    <h3>Shape: Round <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/16.png" alt="Jade"></div>
+                <h2 class="food-title">Jade</h2>
+                <p class="description">A green gemstone with cultural significance in many civilizations, symbolizing
+                    harmony and balance.</p><br>
+                    <h3>Shape: Oval <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/17.png" alt="Lapis Lazuli"></div>
+                <h2 class="food-title">Lapis Lazuli</h2>
+                <p class="description">A deep blue metamorphic rock prized for its intense color and historical
+                    significance, often used in art and jewelry.</p><br>
+                    <h3>Shape: Oval <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 720,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/18.png" alt="Moonstone"></div>
+                <h2 class="food-title">Moonstone</h2>
+                <p class="description">A translucent gemstone with a shimmering appearance, associated with the moon and
+                    intuition.</p><br>
+                    <h3>Shape: Oval <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 144,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/19.png" alt="Coral"></div>
+                <h2 class="food-title">Coral</h2>
+                <p class="description">A marine organism prized for its vibrant red or pink skeletons, often used in
+                    jewelry and decorative items.</p><br>
+                    <h3>Height: 3 feet <br>
+                        Weight: 2 Kilogram </h3>
+                <span class="food-price">₱ 30,000.00</span>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+
+            <div class="works-box">
+                <div class="pic"><img src="gemstone/20.png" alt="Onyx"></div>
+                <h2 class="food-title">Onyx</h2>
+                <p class="description">A banded variety of the mineral chalcedony, usually black, symbolizing protection
+                    and strength.</p><br>
+                    <h3>Shape: Oval <br>
+                        Carat: 18 </h3>
+                <span class="food-price">₱ 144,000.00</span> <br>
+                <i class='bx bx-cart add-to-cart'></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section design -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="DE PERALTA.jpg" alt="Caren Elizabeth F. De Peralta">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Us</span></h2>
+            <h1 class="heading">Caren Elizabeth F. De Peralta</h1>
+            <h3>Full-stack Developer</h3>
+            <p> Our visionary leader, brings years of experience and a wealth of technical knowledge to the team. With a
+                knack for turning ideas into reality, oversees the development process from inception to deployment,
+                ensuring that every project exceeds expectations.</p>
+        </div>
+    </section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <br><br><br><br><br><br>
+        <h2 class="heading">Contact <span>Us</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email Address">
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Contact Number">
+                <input type="text" placeholder="Email Subject">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- footer design -->
+    <footer class="footer">
+        <div class="footer-info">
+            <div class="row">
+                <div class="first-logo">
+                    <a href="#" class="logo"><span>Gem</span>Orbit</a>
+                    <p>1989 Cornelia Crisologo Street Longlive, <br> London United Kingdom 18516212091514</p>
+                    <p>09127202222</p>
+                    <p>gemorbit@gmail.com</p>
+                    <div class="social-media">
+                        <a href="#"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-gmail'></i></a>
+                        <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+                    </div>
+                </div>
+                <div class="support-info">
+                    <h4>Support</h4>
+                    <p>Contact Us</p>
+                    <p>About Us</p>
+                    <p>FAQs</p>
+                    <p>Shopping and returns</p>
+                    <p>Privacy</p>
+                </div>
+                <div class="company-info">
+                    <h4>Company</h4>
+                    <p>About</p>
+                    <p>Blog</p>
+                    <p>Affiliate</p>
+                    <p>Login</p>
+                    <p>SignUp</p>
+                </div>
+            </div>  
+        </div>
+        <div class="footer-info-bottom">
+            <div class="footer-text">
+                <p>Copyright &copy; 2024 by GemOrbit | All Rights Reserved.</p>
+            </div>
+    
+            <div class="footer-iconTop">
+                <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+            </div>
+        </div> 
+    </footer>
+    
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- custom js -->
+    <script src="GemOrbitShop.js"></script>
+
+</body>
+
+</html>
